@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Wallet | Expenses</title>
+  <meta name="description" content="Track and calculate expenses for your personal budget with Smart Wallet." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo">SMART WALLET</span>
+      <p>Expense tracker</p>
+    </div>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="expenses.html">Expenses</a>
+      <a href="savings.html">Saving Goals</a>
+      <button id="themeToggleExpenses" class="theme-btn">Dark Mode</button>
+    </nav>
+  </header>
+
+  <section class="section-light section-center">
+    <div class="tracker-copy">
+      <span class="eyebrow">Expense Tracker</span>
+      <h1>Record daily spending and see your total instantly.</h1>
+      <p>Use the expense calculator below to categorize items and review a snapshot of your monthly spending.</p>
+    </div>
+    <div class="tracker-panel">
+      <form id="expenseForm" class="expense-form">
+        <label>
+          Item
+          <input type="text" id="itemName" placeholder="e.g. groceries" required />
+        </label>
+        <label>
+          Category
+          <select id="itemCategory">
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Entertainment</option>
+            <option>Utilities</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>
+          Amount
+          <input type="number" id="itemAmount" placeholder="0.00" min="0" step="0.01" required />
+        </label>
+        <button type="submit" class="btn btn-primary">Add Expense</button>
+      </form>
+      <div class="expense-summary">
+        <h2>Expense Summary</h2>
+        <p>Total this session:</p>
+        <div class="total-display" id="totalDisplay">$0.00</div>
+        <ul id="expenseList" class="expense-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-grid expense-tips">
+    <article>
+      <h3>Tip</h3>
+      <p>Review expense categories each week to spot where you can save. Even small changes add up fast.</p>
+    </article>
+    <article>
+      <h3>Goal</h3>
+      <p>Focus on lowering recurring expenses and triaging one-time costs for better control.</p>
+    </article>
+  </section>
+
+  <footer class="site-footer">
+    <p>Smart Wallet © 2026</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

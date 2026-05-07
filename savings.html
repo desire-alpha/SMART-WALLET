@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Wallet | Saving Goals</title>
+  <meta name="description" content="Set, track, and celebrate saving goals in Smart Wallet." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo">SMART WALLET</span>
+      <p>Saving goals</p>
+    </div>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="expenses.html">Expenses</a>
+      <a href="savings.html">Saving Goals</a>
+      <button id="themeToggleSavings" class="theme-btn">Dark Mode</button>
+    </nav>
+  </header>
+
+  <section class="hero section-light section-center">
+    <div>
+      <span class="eyebrow">Saving Goals</span>
+      <h1>Build meaningful goals and watch your progress grow.</h1>
+      <p>Set an amount, choose a timeline, and track your journey with motivating visuals.</p>
+    </div>
+    <div class="goal-panel">
+      <form id="goalForm" class="goal-form">
+        <label>
+          Goal name
+          <input type="text" id="goalName" placeholder="e.g. Dream vacation" required />
+        </label>
+        <label>
+          Target amount
+          <input type="number" id="goalAmount" placeholder="0.00" min="0" step="0.01" required />
+        </label>
+        <label>
+          Current saved
+          <input type="number" id="goalCurrent" placeholder="0.00" min="0" step="0.01" required />
+        </label>
+        <button type="submit" class="btn btn-primary">Create Goal</button>
+      </form>
+      <div class="goal-preview" id="goalPreview">
+        <h2>No active goal yet</h2>
+        <p>Create a savings goal to view progress and milestones.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-grid savings-cards">
+    <article>
+      <h3>Innovation</h3>
+      <p>Automatic milestone badges reward consistency and keep your saving momentum strong.</p>
+    </article>
+    <article>
+      <h3>Motivation</h3>
+      <p>Smart Wallet celebrates progress with clear summaries and encouragement.</p>
+    </article>
+    <article>
+      <h3>Ease</h3>
+      <p>Quickly compare multiple goals and choose where to focus your next deposit.</p>
+    </article>
+  </section>
+
+  <footer class="site-footer">
+    <p>Smart Wallet © 2026</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

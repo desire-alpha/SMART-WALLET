@@ -1,0 +1,408 @@
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --surface-alt: #eef2f8;
+  --text: #14213d;
+  --muted: #5f6c8a;
+  --primary: #2b76ff;
+  --primary-soft: #d5e2ff;
+  --accent: #ff9f1c;
+  --border: rgba(20, 33, 61, 0.08);
+  --shadow: 0 24px 60px rgba(20, 33, 61, 0.08);
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background: rgba(255, 255, 255, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(20, 33, 61, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.brand .logo {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-nav a,
+.footer-nav a {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.footer-nav a:hover {
+  color: var(--text);
+}
+
+.theme-btn {
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.hero,
+.section-light,
+.section-center {
+  padding: 64px 32px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-copy {
+  max-width: 620px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.hero h1,
+.about-copy h1,
+.section-intro h2,
+.expense-summary h2,
+.goal-panel h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.2vw, 3.4rem);
+  line-height: 1.05;
+}
+
+.hero p,
+.section-intro p,
+.about-copy p,
+.tracker-copy p,
+.goal-panel p,
+.expense-tips article p,
+.about-details p,
+.team-section p {
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.hero-image,
+.about-image {
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.section-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.section-light {
+  background: #ffffff;
+  margin: 0 32px;
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+}
+
+.features article,
+.objectives article,
+.innovation-card,
+.expense-tips article,
+.about-details div,
+.savings-cards article {
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: rgba(20, 33, 61, 0.07) 0 20px 40px;
+}
+
+.innovation-card img,
+.team-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.mission-grid,
+.about-details,
+.savings-cards {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.expense-form,
+.goal-form {
+  display: grid;
+  gap: 20px;
+  background: var(--surface);
+  padding: 28px;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.expense-form label,
+.goal-form label {
+  display: grid;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.expense-form input,
+.goal-form input,
+.expense-form select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  font-size: 1rem;
+}
+
+.expense-summary {
+  background: linear-gradient(180deg, rgba(43, 118, 255, 0.06), rgba(255, 255, 255, 0.96));
+  padding: 28px;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.total-display {
+  margin: 16px 0 24px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.expense-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.expense-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  background: #f7f9ff;
+  border-radius: 18px;
+  padding: 14px 18px;
+  color: var(--text);
+}
+
+.goal-panel,
+.tracker-panel {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.goal-preview {
+  background: var(--surface);
+  padding: 28px;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  min-height: 280px;
+}
+
+.goal-preview h2 {
+  margin-top: 0;
+}
+
+.goal-progress {
+  height: 18px;
+  border-radius: 999px;
+  background: #e9efff;
+  overflow: hidden;
+  margin: 18px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #2b76ff, #00c9ff);
+}
+
+.site-footer {
+  margin-top: 48px;
+  text-align: center;
+  padding: 28px 32px;
+  color: var(--muted);
+}
+
+.footer-nav {
+  display: inline-flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.section-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .hero,
+  .goal-panel,
+  .tracker-panel,
+  .mission-grid,
+  .about-details,
+  .savings-cards,
+  .innovation-card,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    padding: 18px 20px;
+  }
+
+  .hero,
+  .section-light,
+  .section-center {
+    padding: 40px 20px;
+  }
+
+  .main-nav {
+    gap: 12px;
+  }
+}
+
+.dark-mode {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.dark-mode .site-header,
+.dark-mode .section-light,
+.dark-mode .expense-form,
+.dark-mode .goal-form,
+.dark-mode .expense-summary,
+.dark-mode .hero-image,
+.dark-mode .about-image,
+.dark-mode .goal-preview {
+  background: #1f2937;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.dark-mode .main-nav a,
+.dark-mode .footer-nav a,
+.dark-mode .brand p,
+.dark-mode .eyebrow,
+.dark-mode .btn-secondary,
+.dark-mode .expense-list li {
+  color: #d1d5db;
+}
+
+.dark-mode .btn-secondary {
+  background: #111827;
+}
+
+.dark-mode .btn-primary {
+  background: #2563eb;
+}
+
+.dark-mode input,
+.dark-mode select {
+  background: #111827;
+  color: #e5e7eb;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.dark-mode .site-footer {
+  color: #9ca3af;
+}
